@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #F5F1E8;
+}
+
+nav {
+  background-color: #D8CFC0;
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar img {
+  width: 120px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+  gap: 20px;
+  padding: 0;
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #1E2A38;
+  font-weight: bold;
+}
+
+/* Dropdown */
+.navbar ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #D8CFC0;
+  padding: 0;
+  min-width: 140px;
+}
+
+.navbar ul li:hover ul {
+  display: block;
+}
+
+.navbar ul li ul li a {
+  display: block;
+  padding: 10px;
+}
+
+.navbar ul li ul li a:hover {
+  background-color: #1E4ED8;
+  color: white;
+}
+
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+footer {
+  background-color: #1E2A38;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.footer a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.carousel img {
+  max-width: 80vw;
+  height: auto;
+  object-fit: cover;
+  padding-top: 20px;
+}
+
+/* Rounded cards with hover effect */
+.card {
+  border-radius: 15px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-8px); /* Lifts the card slightly */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+/* Navbar font */
+.navbar, .navbar .nav-link {
+  font-family: cc-pass-the-port-aged, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 23px;
+}
+
+/* H1 & H2 font */
+h1, h2, h3, h4 {
+font-family: gunplay-spraypaint, sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+/* Paragraph font */
+p {
+  font-family: merriweather, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
