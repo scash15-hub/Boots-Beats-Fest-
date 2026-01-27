@@ -64,9 +64,27 @@ nav {
 main {
   padding: 40px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #1E2A38;
   color: white;
   text-align: center;
@@ -82,69 +100,45 @@ footer {
 .footer a:hover {
   text-decoration: underline;
 }
-
-/* Carousel Styling */
-.carousel {
-  width: 100%;
-  background-color: #F5F1E8;
-  max-width: 100%;
-  overflow: hidden;
-  position: relative;
+.image-container {
+  display: flex; /* Enables flexbox layout for the container */
+  justify-content: center; /* Centers the images within the container */
+  gap: 1em; /* Adds space between the images */
 }
 
-.carousel-inner {
-  background-color: #F5F1E8;
-  position: relative;
-  width: 100%;
+.image-container img {
+  flex: 1; /* Allows images to grow and shrink proportionally */
+  max-width: 300px; /* Optional: Sets a maximum width for each image */
+  height: auto; /* Maintains the aspect ratio of the images */
 }
 
-.carousel-item {
-  position: relative;
-  display: none;
-  width: 100%;
-}
-
-.carousel-item.active {
-  display: block;
-}
-
-.carousel img {
-  max-width: 100%;
-  max-height: 500px;
-  height: auto;
-  width: 100%;
+/* Make Zach Bryan image larger and centered within the container */
+.image-container img:first-child {
+  width: 360px;
+  height: 360px;
   object-fit: cover;
-  padding-top: 20px;
+  align-self: center;
+  border-radius: 12px;
+}
+
+/* Make the other images smaller to balance the layout */
+.image-container img:not(:first-child) {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Adjust Carrie Underwood image framing to show her face */
+.carrie-img {
+  /* show the upper portion of the image (face) */
+  object-position: center 20%;
+  height: 320px; /* increase height so face is visible */
+  width: 100%;
   display: block;
-  margin: 0 auto;
+  object-fit: cover;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  width: auto;
-  height: auto;
-  background: none;
-  border: none;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  opacity: 1;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  width: 50px;
-  height: 50px;
-  filter: brightness(0.3);
-  background-size: contain;
-}
 
 /* Rounded cards with hover effect */
 .card {
@@ -160,10 +154,69 @@ footer {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
+/* Make non-main cards a consistent size and layout */
+.card:not(.main-act-card) {
+  display: flex;
+  flex-direction: column;
+  min-height: 360px; /* consistent card height */
+}
+
+.card:not(.main-act-card) .card-body {
+  flex: 1; /* ensure body expands to fill card */
+}
+
+.card:not(.main-act-card) .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Mezzanine cards: make them the same size and a bit wider */
+.mezzanine .row {
+  justify-content: center;
+  gap: 1rem; /* slightly smaller gap so two cards fill the row */
+}
+
+.mezzanine .col-md-6 {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 48%;
+  max-width: 48%;
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.mezzanine .card {
+  width: 100%; /* fill the column */
+  min-height: 420px; /* consistent height */
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.mezzanine .card .card-body {
+  flex: 1;
+}
+
+.mezzanine .card .card-img-top {
+  height: 240px;
+  object-fit: cover;
+  width: 100%;
+}
+
 /* Standardized image sizing for cards */
 .card-img-top {
   object-fit: cover;
-  height: 250px;
+  height: 200px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 16px; /* horizontal padding inside the image */
+}
+
+/* Add extra horizontal gap between columns when using g-5 */
+.row.g-5 {
+  gap: 2rem;
 }
 
 /* Supporting acts cards - smaller images */
@@ -174,8 +227,14 @@ footer {
 
 /* Main act card - larger image */
 .card.main-act-card .card-img-top {
-  height: 350px;
+  height: 200px;
   object-fit: cover;
+}
+
+/* Ensure main act card centers properly */
+.main-act-card {
+  margin: 0 auto;
+  display: block;
 }
 
 /* Sponsor logo cards */
@@ -231,6 +290,34 @@ font-weight: 400;
 font-style: normal;
 }
 
+.team{
+  text-align: center;
+}
+
+h3{
+  font-size: 24px;
+}
+h1, h2, p, h3{
+  text-align: center;
+}
+
+/* Stadium seating card: wider and centered */
+.stadium-card {
+  max-width: calc(100% - 10px);
+  width: 100%;
+  margin: 0;
+}
+
+.stadium-card .card-img-top {
+  height: 480px;
+  width: 100%;
+  object-fit: cover;
+}
+
+h4{
+  font-size: 20px;
+  text-align: center;
+}
 /* Paragraph font */
 p {
   font-family: merriweather, serif;
@@ -238,4 +325,80 @@ p {
   font-style: normal;
 }
 
+/* Image container - uniform sizing */
+.image-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
 
+.image-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.card-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 12px;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .card h3 {
+    margin: 10px 0 0;
+  }
+
+  .card img.card-img-top {
+  padding-top: 15px;
+}
+
+/* MAP CENTERING */
+.map-section {
+  display: flex;
+  justify-content: center;
+}
+
+/* CARD IMAGES */
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CARD STYLE */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* DEMOGRAPHIC IMAGE ROW */
+.demographic-images img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}

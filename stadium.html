@@ -7,6 +7,26 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.typekit.net/bfv7agp.css">
+  <style>
+    /* Center the stadium card vertically */
+    .stadium-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Make cards wider with max-width */
+    .card {
+      max-width: 700px;
+      margin: 0 auto 20px auto; /* center horizontally with spacing below */
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
 
@@ -32,14 +52,12 @@
   </ul>
 </nav>
 
-<!-- Seating Chart -->
-<section class="container my-4">
-  <h2 class="mb-3 text-center">Seating Chart</h2>
-  <div class="card mx-auto" style="max-width:600px;">
-    <img src="stadium-seating.png" class="card-img-top" alt="Seating Chart with Team Logo">
+<!-- Stadium Card Centered Vertically -->
+<section class="stadium-section">
+  <div class="card">
+    <img src="stadium-seating.png" class="card-img-top img-fluid" alt="Seating Chart with Team Logo">
     <div class="card-body text-center">
       <h3>Nissan Stadium</h3>
-      <br>
       <p><strong>Capacity:</strong> 67,700 people</p>
       <p><strong>Unique Feature:</strong> Big rooftop fan deck</p>
     </div>
@@ -55,7 +73,7 @@
     <!-- VIP Suites Card -->
     <div class="col-md-6">
       <div class="card h-100 hover-scale">
-        <img src="suite.png" class="card-img-top" alt="VIP Suites">
+        <img src="suite.png" class="card-img-top img-fluid" alt="VIP Suites">
         <div class="card-body text-center">
           <h5 class="card-title">VIP Suites</h5>
           <p class="card-text">Enjoy premium seating with private TVs, close-up views of the stage/field, and exclusive amenities for VIP ticket holders.</p>
@@ -66,7 +84,7 @@
     <!-- Concessions & Amenities Card -->
     <div class="col-md-6">
       <div class="card h-100 hover-scale">
-        <img src="amentities.png" class="card-img-top" alt="Concessions and Amenities">
+        <img src="amentities.png" class="card-img-top img-fluid" alt="Concessions and Amenities">
         <div class="card-body text-center">
           <h5 class="card-title">Concessions & Amenities</h5> 
           <p class="card-text">Dave's Hot Chicken stands, Coke beverage stations, restrooms, merchandise booths, private suites with TVs for a close-up view of the stage/field, special merchandise including Boots from Boot-Barn, and access to the rooftop skyline deck for a premium viewing experience.</p>
@@ -84,7 +102,7 @@
 
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 text-center">
-        <img src="entrance.png" class="card-img-top" alt="Entrances">
+        <img src="entrance.png" class="card-img-top img-fluid" alt="Entrances">
         <div class="card-body">
           <h5>Entrances</h5>
           <p>Multiple entrances with easy access to main roads and parking lots.</p>
@@ -94,7 +112,7 @@
 
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 text-center">
-        <img src="hot.png" class="card-img-top" alt="Food">
+        <img src="hot.png" class="card-img-top img-fluid" alt="Food">
         <div class="card-body">
           <h5>Food</h5>
           <p>Dave's Hot Chicken stands with signature items like Hot Chicken Sliders and Specialty Combos.</p>
@@ -104,7 +122,7 @@
 
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 text-center">
-        <img src="bathroom.png" class="card-img-top" alt="Bathrooms">
+        <img src="bathroom.png" class="card-img-top img-fluid" alt="Bathrooms">
         <div class="card-body">
           <h5>Bathrooms</h5>
           <p>Located on floor level and upper levels for easy access to all guests.</p>
@@ -114,7 +132,7 @@
 
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 text-center">
-        <img src="merch.png" class="card-img-top" alt="Merchandise">
+        <img src="merch.png" class="card-img-top img-fluid" alt="Merchandise">
         <div class="card-body">
           <h5>Merchandise Stores</h5>
           <p>Apparel and souvenirs located throughout stadium and VIP suites.</p>
@@ -124,7 +142,7 @@
 
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 text-center">
-        <img src="security.png" class="card-img-top" alt="Security">
+        <img src="security.png" class="card-img-top img-fluid" alt="Security">
         <div class="card-body">
           <h5>Security</h5>
           <p>Professional security teams at entrances and throughout the stadium.</p>
@@ -142,7 +160,7 @@
 
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 text-center">
-        <img src="daves.png" class="card-img-top">
+        <img src="daves.png" class="card-img-top img-fluid">
         <div class="card-body">
           <h5>Dave's Hot Chicken</h5>
           <p>Menu includes: Hot Chicken Sliders, Tender & Fries, Specialty Combos, $8-$16</p>
@@ -152,7 +170,7 @@
 
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 text-center">
-        <img src="drinks.png" class="card-img-top">
+        <img src="drinks.png" class="card-img-top img-fluid">
         <div class="card-body">
           <h5>Coca-Cola Products</h5>
           <p>Drinks offered: Coke, Sprite, Dr Pepper, Fanta, Powerade, Smartwater, $4-$10</p>
@@ -162,7 +180,7 @@
 
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 text-center">
-        <img src="stand.png" class="card-img-top">
+        <img src="stand.png" class="card-img-top img-fluid">
         <div class="card-body">
           <h5>Concession Stand</h5>
           <p>Drinks, Desserts, Dinner, etc</p>
@@ -186,7 +204,7 @@
 
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 text-center">
-        <img src="transit.png" class="card-img-top p-2 mx-auto d-block" style="height:200px; object-fit:cover;">
+        <img src="transits.png" class="card-img-top p-2 mx-auto d-block img-fluid">
         <div class="card-body">
           <h5>WeGo Public Transit</h5>
           <p><a href="https://www.wegotransit.com/" target="_blank">Website</a></p>
@@ -196,7 +214,7 @@
 
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 text-center">
-        <img src="taxi.png" class="card-img-top p-2 mx-auto d-block" style="height:200px; object-fit:cover;">
+        <img src="taxi.png" class="card-img-top p-2 mx-auto d-block img-fluid">
         <div class="card-body">
           <h5>Taxi</h5>
         </div>
@@ -205,7 +223,7 @@
 
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 text-center">
-        <img src="car.png" class="card-img-top mx-auto d-block" style="height:200px; object-fit:cover;">
+        <img src="car.png" class="card-img-top mx-auto d-block img-fluid">
         <div class="card-body">
           <h5>Rental Car</h5>
           <a href="https://www.hertz.com/us/en" target="_blank">Rent Your Car</a>
