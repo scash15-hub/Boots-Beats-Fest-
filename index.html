@@ -79,24 +79,27 @@
   <section class="container my-5">
     <div class="row text-center g-4">
       <div class="col-4">
-        <div class="card h-100 hover-scale p-2">
-          <div class="img-placeholder"><img src="nashville.png" alt="nashville"
-              style="height: 200px; width: 100%; object-fit: cover;"></div>
-          <h4><a href="city.html" class="btn btn-warning mt-2">City Information</a></h4>
+        <div class="card h-100 hover-scale p-0">
+          <img src="nashville.png" alt="nashville" class="card-img-top">
+          <div class="card-body">
+            <h4><a href="city.html" class="btn btn-warning">City Information</a></h4>
+          </div>
         </div>
       </div>
       <div class="col-4">
-        <div class="card h-100 hover-scale p-2">
-          <div class="img-placeholder"><img src="stadium.png" alt="stadium"
-              style="height: 200px; width: 100%; object-fit: cover;"></div>
-          <h4><a href="stadium.html" class="btn btn-warning mt-2">Stadium Information</a></h4>
+        <div class="card h-100 hover-scale p-0">
+          <img src="stadium.png" alt="stadium" class="card-img-top">
+          <div class="card-body">
+            <h4><a href="stadium.html" class="btn btn-warning">Stadium Information</a></h4>
+          </div>
         </div>
       </div>
       <div class="col-4">
-        <div class="card h-100 hover-scale p-2">
-          <div class="img-placeholder"><img src="store.png" alt="store"
-              style="height: 200px; width: 100%; object-fit: cover;"></div>
-          <h4><a href="store.html" class="btn btn-warning mt-2">Team Store</a></h4>
+        <div class="card h-100 hover-scale p-0">
+          <img src="store.png" alt="store" class="card-img-top">
+          <div class="card-body">
+            <h4><a href="store.html" class="btn btn-warning">Team Store</a></h4>
+          </div>
         </div>
       </div>
     </div>
@@ -178,6 +181,17 @@
 </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const carouselElement = document.getElementById('heroCarousel');
+      if (carouselElement) {
+        new bootstrap.Carousel(carouselElement, {
+          interval: 5000,
+          wrap: true
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
