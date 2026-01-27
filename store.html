@@ -4,52 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boots & Beast Fest | Merch Stand</title>
-  <link rel="stylesheet" href="https://use.typekit.net/bfv7agp.css">
 
-    <!-- BOOTSTRAP -->
+    <!-- Typekit Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/bfv7agp.css">
+
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- YOUR CSS -->
+    <!-- Your CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <!-- NAVBAR -->
-      <nav class="navbar d-flex align-items-center p-2">
-    <a href="index.html"><img src="logo.png" alt="Festival Logo" class="logo-img"></a>
-    <ul class="nav ms-auto">
-      <li class="nav-item"><a class="nav-link" href="city.html">City Info</a></li>
-      <li class="nav-item"><a class="nav-link" href="travel.html">Travel</a></li>
-      <li class="nav-item dropdown-hover">
-        <a class="nav-link" href="#">Line Up ▼</a>
-        <ul>
-          <li><a href="night1.html">Night 1</a></li>
-          <li><a href="night2.html">Night 2</a></li>
-          <li><a href="night3.html">Night 3</a></li>
-        </ul>
-      </li>
-      <li class="nav-item"><a class="nav-link" href="stadium.html">Stadium</a></li>
-      <li class="nav-item"><a class="nav-link" href="store.html">Team Store</a></li>
-      <li class="nav-item"><a class="nav-link" href="promotion.html">Opening Day Promo</a></li>
-      <li class="nav-item"><a class="nav-link" href="final.html">Final Summation</a></li>
-      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar p-3">
+      <a href="index.html">
+        <img src="logo.png" alt="Festival Logo" class="logo-img" />
+      </a>
+
+      <ul class="nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="city.html">City Info</a></li>
+        <li class="nav-item"><a class="nav-link" href="travel.html">Travel</a></li>
+
+        <li class="nav-item dropdown-hover">
+          <a class="nav-link">Line Up ▼</a>
+          <ul class="dropdown-menu-custom">
+            <li><a href="night1.html">Night 1</a></li>
+            <li><a href="night2.html">Night 2</a></li>
+            <li><a href="night3.html">Night 3</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="stadium.html">Stadium</a></li>
+        <li class="nav-item"><a class="nav-link" href="store.html">Team Store</a></li>
+        <li class="nav-item"><a class="nav-link" href="promotion.html">Opening Day Promo</a></li>
+        <li class="nav-item"><a class="nav-link" href="final.html">Final Summation</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
     <!-- STAFF SHIRT -->
     <section class="container my-5">
       <h2 class="text-center mb-4">Festival Staff Shirt</h2>
-
       <div class="row justify-content-center g-4">
         <div class="col-md-4">
-          <div class="card text-center h-100">
-            <img
-              src="staff.png"
-              class="card-img-top"
-            />
+          <div class="card h-100 text-center">
+            <img src="staff.png" class="card-img-top" alt="Staff Shirt" />
           </div>
         </div>
       </div>
@@ -58,14 +61,10 @@
     <!-- FESTIVAL MERCH -->
     <section class="container my-5">
       <h2 class="text-center mb-4">Festival Merch</h2>
-
       <div class="row g-4 justify-content-center">
         <div class="col-md-4">
           <div class="card h-100 text-center">
-            <img
-              src="t-shirt.png"
-              class="card-img-top"
-            />
+            <img src="t-shirt.png" class="card-img-top" alt="T-Shirt" />
             <div class="card-body">
               <h5>T-Shirt</h5>
               <strong>$40</strong>
@@ -75,13 +74,10 @@
 
         <div class="col-md-4">
           <div class="card h-100 text-center">
-            <img
-              src="sweatshirt.png"
-              class="card-img-top"
-            />
+            <img src="sweatshirt.png" class="card-img-top" alt="Sweatshirt" />
             <div class="card-body">
               <h5>Sweatshirt</h5>
-              <p>Has artists name on the back.</p>
+              <p>Has artist's name on the back.</p>
               <strong>$60</strong>
             </div>
           </div>
@@ -89,10 +85,7 @@
 
         <div class="col-md-4">
           <div class="card h-100 text-center">
-            <img
-              src="hat.png"
-              class="card-img-top"
-            />
+            <img src="hat.png" class="card-img-top" alt="Hat" />
             <div class="card-body">
               <h5>Hat</h5>
               <strong>$25</strong>
@@ -102,10 +95,7 @@
 
         <div class="col-md-4">
           <div class="card h-100 text-center">
-            <img
-              src="tote.png"
-              class="card-img-top"
-            />
+            <img src="tote.png" class="card-img-top" alt="Tote Bag" />
             <div class="card-body">
               <h5>Tote Bag</h5>
               <strong>$30</strong>
@@ -115,10 +105,7 @@
 
         <div class="col-md-4">
           <div class="card h-100 text-center">
-            <img
-              src="poster.png"
-              class="card-img-top"
-            />
+            <img src="poster.png" class="card-img-top" alt="Poster" />
             <div class="card-body">
               <h5>Poster</h5>
               <p>Some might be signed!</p>
@@ -129,10 +116,7 @@
 
         <div class="col-md-3">
           <div class="card h-100 text-center">
-            <img
-              src="pin.png"
-              class="card-img-top"
-            />
+            <img src="pin.png" class="card-img-top" alt="Pin" />
             <div class="card-body">
               <h5>Pin</h5>
               <strong>$5</strong>
@@ -146,8 +130,7 @@
     <section class="container my-5 text-center">
       <h2>Pricing Strategy</h2>
       <p>
-        Festival merch is priced to be accessible for all fans, while artist
-        merch is premium-priced due to limited availability and high demand.
+        Festival merch is priced to be accessible for all fans, while artist merch is premium-priced due to limited availability and high demand.
       </p>
     </section>
 
@@ -155,18 +138,13 @@
     <footer class="footer mt-5 text-center p-4">
       <p>
         View our festival
-        <a href="https://music.apple.com/us/home" target="_blank">
-          Setlist on Apple Music
-        </a>
+        <a href="https://music.apple.com/us/home" target="_blank">Setlist on Apple Music</a>
       </p>
-
       <p>
         Proud Sponsor:
-        <a href="https://www.giftoflife.org/" target="_blank">Gift of Life</a
-        ><br />
+        <a href="https://www.giftoflife.org/" target="_blank">Gift of Life</a><br />
         Supporting Blood Cancer Awareness
       </p>
-
       <p>© 2026 Boots & Beast Fest | Nashville, TN</p>
     </footer>
   </body>

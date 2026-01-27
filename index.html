@@ -5,153 +5,183 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boots & Beast Fest | Home</title>
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/bfv7agp.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar d-flex align-items-center p-1">
-    <a href="index.html"><img src="logo.png" alt="Festival Logo" class="logo-img"></a>
-    <ul class="nav ms-auto">
-      <li class="nav-item"><a class="nav-link" href="city.html">City Info</a></li>
-      <li class="nav-item"><a class="nav-link" href="travel.html">Travel</a></li>
-      <li class="nav-item dropdown-hover">
-        <a class="nav-link" href="#">Line Up ▼</a>
-        <ul>
-          <li><a href="night1.html">Night 1</a></li>
-          <li><a href="night2.html">Night 2</a></li>
-          <li><a href="night3.html">Night 3</a></li>
-        </ul>
-      </li>
-      <li class="nav-item"><a class="nav-link" href="stadium.html">Stadium</a></li>
-      <li class="nav-item"><a class="nav-link" href="store.html">Team Store</a></li>
-      <li class="nav-item"><a class="nav-link" href="promotion.html">Opening Day Promo</a></li>
-      <li class="nav-item"><a class="nav-link" href="final.html">Final Summation</a></li>
-      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="image-container">
-  <img src="ZachBryan.png" alt="Description of image 1">
-  <img src="LukeCombs.png" alt="Description of image 2">
-  <img src="MorganWallen.png" alt="Description of image 3">
-</div>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html">
+    <img src="logo.png" alt="Festival Logo" class="logo-img">
+  </a>
 
- <!-- TEAM PARAGRAPH -->
-  <section class="container my-5 team">
-    <h2 class="text-center">About Boots & Beast Fest</h2>
-    <p class="text-center mt-3">
-      Boots & Beast Fest combines Nashville’s iconic country music roots with high-energy performances
-      to create an unforgettable festival experience. Our goal is to entertain, support local causes,
-      and establish a long-term festival brand.
-    </p>
-  </section>
+  <ul class="nav ms-auto">
+    <li class="nav-item"><a class="nav-link" href="city.html">City Info</a></li>
+    <li class="nav-item"><a class="nav-link" href="travel.html">Travel</a></li>
 
-  <!-- MAIN CARDS -->
-  <section class="container my-5">
-    <div class="row text-center g-4">
-      <div class="col-4">
-        <div class="card h-100 hover-scale p-1">
-          <div class="img-placeholder"><img src="nashville.png" alt="nashville"
-              style="height: 200px; width: 100%; object-fit: cover;"></div>
-          <h4><a href="city.html" class="btn btn-warning mt-2">City Information</a></h4>
+<li class="nav-item dropdown-hover">
+  <a class="nav-link">Line Up ▼</a>
+
+  <ul class="dropdown-menu-custom">
+    <li><a href="night1.html">Night 1</a></li>
+    <li><a href="night2.html">Night 2</a></li>
+    <li><a href="night3.html">Night 3</a></li>
+  </ul>
+</li>
+
+
+
+    <li class="nav-item"><a class="nav-link" href="stadium.html">Stadium</a></li>
+    <li class="nav-item"><a class="nav-link" href="store.html">Team Store</a></li>
+    <li class="nav-item"><a class="nav-link" href="promotion.html">Opening Day Promo</a></li>
+    <li class="nav-item"><a class="nav-link" href="final.html">Final Summation</a></li>
+    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ABOUT SECTION -->
+<section class="container my-4 team">
+  <h2>About Boots & Beast Fest</h2>
+  <p class="mt-2">
+    Boots & Beast Fest combines Nashville’s iconic country music roots with high-energy performances
+    to create an unforgettable festival experience. Our goal is to entertain, support local causes,
+    and establish a long-term festival brand.
+  </p>
+</section>
+
+<!-- MAIN CARDS -->
+<section class="container my-4">
+  <div class="row g-4 text-center">
+
+    <div class="col-md-4 col-12">
+      <div class="card hover-scale">
+        <div class="img-placeholder">
+          <img src="nashville.png" alt="Nashville">
         </div>
-      </div>
-      <div class="col-4">
-        <div class="card h-100 hover-scale p-1">
-          <div class="img-placeholder"><img src="stadium.png" alt="stadium"
-              style="height: 200px; width: 100%; object-fit: cover;"></div>
-          <h4><a href="stadium.html" class="btn btn-warning mt-2">Stadium Information</a></h4>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card h-100 hover-scale p-1">
-          <div class="img-placeholder"><img src="store.png" alt="store"
-              style="height: 200px; width: 100%; object-fit: cover;"></div>
-          <h4><a href="store.html" class="btn btn-warning mt-2">Team Store</a></h4>
+        <div class="card-body">
+          <a href="city.html" class="btn btn-warning">City Information</a>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- SPONSOR PROMOTIONS -->
-<section class="container my-5">
+    <div class="col-md-4 col-12">
+      <div class="card hover-scale">
+        <div class="img-placeholder">
+          <img src="stadium.png" alt="Stadium">
+        </div>
+        <div class="card-body">
+          <a href="stadium.html" class="btn btn-warning">Stadium Information</a>
+        </div>
+      </div>
+    </div>
 
-  <!-- National Sponsors -->
-  <h4 class="mb-3 text-center">National Sponsors</h4>
-  <div class="row g-4 justify-content-center mb-4">
-    <div class="col-md-3">
-      <div class="card h-100 text-center p-1">
-        <img src="coke.png" class="card-img-top mb-3" style="height:120px; object-fit:contain;" alt="Coca-Cola Logo">
-        <h5>Coca-Cola</h5>
+    <div class="col-md-4 col-12">
+      <div class="card hover-scale">
+        <div class="img-placeholder">
+          <img src="store.png" alt="Store">
+        </div>
+        <div class="card-body">
+          <a href="store.html" class="btn btn-warning">Team Store</a>
+        </div>
       </div>
     </div>
-    <div class="col-md-3">
-      <div class="card h-100 text-center p-1">
-        <img src="visa.png" class="card-img-top mb-3" style="height:120px; object-fit:contain;" alt="Budweiser Logo">
-        <h5>Visa</h5>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card h-100 text-center p-1">
-        <img src="music.png" class="card-img-top mb-3" style="height:120px; object-fit:contain;" alt="Apple Music Logo">
-        <h5>Apple Music</h5>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card h-100 text-center p-1">
-        <img src="target.png" class="card-img-top mb-3" style="height:120px; object-fit:contain;" alt="Fender Logo">
-        <h5>Target</h5>
-      </div>
-    </div>
-  </div>
 
-  <!-- Local Sponsors -->
-  <h4 class="mb-3 text-center">Local Sponsors</h4>
-  <div class="row g-4 justify-content-center">
-    <div class="col-md-3">
-      <div class="card h-100 text-center p-1">
-        <img src="boot.png" class="card-img-top mb-3" style="height:120px; object-fit:contain;" alt="Nashville Sounds Logo">
-        <h5>Cavender’s Boot City</h5>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card h-100 text-center p-1">
-        <img src="froth.png" class="card-img-top mb-3" style="height:120px; object-fit:contain;" alt="Jack Daniel’s Logo">
-        <h5>Frothy Monkey</h5>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card h-100 text-center p-1">
-        <img src="citycenter.png" class="card-img-top mb-3" style="height:120px; object-fit:contain;" alt="Hattie’s Hot Chicken Logo">
-        <h5>Music City Center</h5>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card h-100 text-center p-1">
-        <img src="hats.png" class="card-img-top mb-3" style="height:120px; object-fit:contain;" alt="Bluebird Cafe Logo">
-        <h5>Hat Tricks Nashville</h5>
-      </div>
-    </div>
   </div>
 </section>
 
+<!-- SPONSORS -->
+<section class="container my-5">
 
-  <!-- FOOTER -->
-<footer class="footer mt-5">
+  <h4 class="text-center mb-3">National Sponsors</h4>
+  <div class="row g-4 justify-content-center">
+
+    <div class="col-md-3 col-6">
+      <div class="card sponsor-card">
+        <img src="coke.png" alt="Coca-Cola">
+        <h5>Coca-Cola</h5>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <div class="card sponsor-card">
+        <img src="visa.png" alt="Visa">
+        <h5>Visa</h5>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <div class="card sponsor-card">
+        <img src="music.png" alt="Apple Music">
+        <h5>Apple Music</h5>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <div class="card sponsor-card">
+        <img src="target.png" alt="Target">
+        <h5>Target</h5>
+      </div>
+    </div>
+
+  </div>
+
+  <h4 class="text-center mt-5 mb-3">Local Sponsors</h4>
+  <div class="row g-4 justify-content-center">
+
+    <div class="col-md-3 col-6">
+      <div class="card sponsor-card">
+        <img src="boot.png" alt="Cavender’s Boot City">
+        <h5>Cavender’s Boot City</h5>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <div class="card sponsor-card">
+        <img src="froth.png" alt="Frothy Monkey">
+        <h5>Frothy Monkey</h5>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <div class="card sponsor-card">
+        <img src="citycenter.png" alt="Music City Center">
+        <h5>Music City Center</h5>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <div class="card sponsor-card">
+        <img src="hats.png" alt="Hat Tricks Nashville">
+        <h5>Hat Tricks Nashville</h5>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
   <p>
     View our festival <a href="https://music.apple.com/us/home" target="_blank">Setlist on Apple Music</a>
   </p>
+
   <p>
     Proud Sponsor: <a href="https://www.giftoflife.org/" target="_blank">Gift of Life</a><br>
     Supporting Blood Cancer Awareness through festival proceeds and guest donations.
   </p>
+
   <p>© 2026 Boots & Beast Fest | Nashville, TN</p>
 </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

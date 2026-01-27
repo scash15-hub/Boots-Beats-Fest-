@@ -7,44 +7,31 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.typekit.net/bfv7agp.css">
-  <style>
-    /* Center the stadium card vertically */
-    .stadium-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    /* Make cards wider with max-width */
-    .card {
-      max-width: 700px;
-      margin: 0 auto 20px auto; /* center horizontally with spacing below */
-    }
-
-    .card img {
-      width: 100%;
-      height: auto;
-    }
-  </style>
-</head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar d-flex align-items-center p-3">
-  <a href="index.html"><img src="logo.png" alt="Festival Logo" class="logo-img"></a>
+<nav class="navbar">
+  <a href="index.html">
+    <img src="logo.png" alt="Festival Logo" class="logo-img">
+  </a>
+
   <ul class="nav ms-auto">
     <li class="nav-item"><a class="nav-link" href="city.html">City Info</a></li>
     <li class="nav-item"><a class="nav-link" href="travel.html">Travel</a></li>
-    <li class="nav-item dropdown-hover">
-      <a class="nav-link" href="#">Line Up ▼</a>
-      <ul>
-        <li><a href="night1.html">Night 1</a></li>
-        <li><a href="night2.html">Night 2</a></li>
-        <li><a href="night3.html">Night 3</a></li>
-      </ul>
-    </li>
-    <li class="nav-item"><a class="nav-link active" href="stadium.html">Stadium</a></li>
+
+<li class="nav-item dropdown-hover">
+  <a class="nav-link">Line Up ▼</a>
+
+  <ul class="dropdown-menu-custom">
+    <li><a href="night1.html">Night 1</a></li>
+    <li><a href="night2.html">Night 2</a></li>
+    <li><a href="night3.html">Night 3</a></li>
+  </ul>
+</li>
+
+
+
+    <li class="nav-item"><a class="nav-link" href="stadium.html">Stadium</a></li>
     <li class="nav-item"><a class="nav-link" href="store.html">Team Store</a></li>
     <li class="nav-item"><a class="nav-link" href="promotion.html">Opening Day Promo</a></li>
     <li class="nav-item"><a class="nav-link" href="final.html">Final Summation</a></li>
@@ -53,8 +40,8 @@
 </nav>
 
 <!-- Stadium Card Centered Vertically -->
-<section class="stadium-section">
-  <div class="card">
+<section class="stadium-section d-flex justify-content-center my-5">
+  <div class="card stadium-card hover-scale">
     <img src="stadium-seating.png" class="card-img-top img-fluid" alt="Seating Chart with Team Logo">
     <div class="card-body text-center">
       <h3>Nissan Stadium</h3>
@@ -63,6 +50,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- MEZZANINE LEVEL -->
 <section class="container my-5">
