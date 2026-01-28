@@ -1,20 +1,45 @@
-/* Reset and body */
+/* =======================
+   Body & Fonts
+======================= */
 body {
   margin: 0;
-  font-family: 'merriweather', serif;
+  font-family: Arial, sans-serif;
   background-color: #F5F1E8;
+  color: #1E2A38;
 }
 
-/* NAVBAR */
-.navbar {
-  width: 100%;
+p {
+  font-family: merriweather, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1, h2, h3, h4 {
+  font-family: gunplay-spraypaint, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+h1, h2, p, h3 {
+  text-align: center;
+}
+
+/* =======================
+   Navbar
+======================= */
+nav {
   background-color: #D8CFC0;
   padding: 10px 20px;
-  display: flex;
-  align-items: center;
 }
 
-.navbar img.logo-img {
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar img {
   width: 120px;
 }
 
@@ -35,92 +60,225 @@ body {
   color: #1E2A38;
   font-weight: bold;
   font-family: cc-pass-the-port-aged, sans-serif;
-  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 23px;
 }
 
-/* Dropdown Menu */
-.dropdown-hover ul {
+/* Dropdown menu */
+.navbar ul li ul {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background-color: #D8CFC0;
-  min-width: 140px;
   padding: 0;
+  min-width: 140px;
+  border-radius: 5px;
+  z-index: 100;
 }
 
-.dropdown-hover:hover ul {
+.navbar ul li:hover ul {
   display: block;
 }
 
-.dropdown-hover ul li a {
+.navbar ul li ul li a {
   display: block;
   padding: 10px;
-  color: #1E2A38;
 }
 
-.dropdown-hover ul li a:hover {
+.navbar ul li ul li a:hover {
   background-color: #1E4ED8;
   color: white;
 }
 
-/* CARDS */
-.card {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  background-color: #ffffff; /* default background */
-}
-
-.transparent-card {
-  background-color: transparent; /* make card see-through */
-  box-shadow: none;
-}
-
-/* Card text styling */
-.card-body h1, .card-body h2, .card-body h3, .card-body h5 {
-  font-family: 'gunplay-spraypaint', sans-serif;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
-.card-body p, .card-body strong {
-  font-family: 'merriweather', serif;
-  text-align: center;
-}
-
-/* Card Images */
-.card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Hover Effect for Cards */
-.hover-scale {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover-scale:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* FOOTER */
-footer.footer {
+/* =======================
+   Footer
+======================= */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #1E2A38;
   color: white;
   text-align: center;
-  padding: 20px 10px;
+  padding: 15px;
 }
 
-footer a {
+.footer a {
   color: #FFD700;
   text-decoration: none;
   font-weight: bold;
 }
 
-footer a:hover {
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* =======================
+   Card Styles
+======================= */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 360px; /* ensures all cards same height */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+
+/* Main act cards / larger images */
+.card.main-act-card .card-img-top {
+  height: 280px;
+}
+
+/* Sponsor cards */
+.card.sponsor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.card.sponsor-card img {
+  height: 120px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+/* Image containers */
+.image-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.image-container img:first-child {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+  align-self: center;
+}
+
+.image-container img:not(:first-child) {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Stadium cards */
+.stadium-card {
+  max-width: 100%;
+  width: 100%;
+}
+
+.stadium-card .card-img-top {
+  height: 480px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Mezzanine cards: two per row */
+.mezzanine .row {
+  justify-content: center;
+  gap: 1rem;
+}
+
+.mezzanine .col-md-6 {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 48%;
+  max-width: 48%;
+  padding: 0.5rem;
+}
+
+.mezzanine .card {
+  width: 100%;
+  min-height: 420px;
+}
+
+/* Hover scale effect for all cards */
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.card .card-img-top {
+  width: 100%;
+  height: auto;       /* let the height adjust automatically */
+  max-height: 300px;  /* optional max height */
+  object-fit: contain; /* show full image */
+  display: block;
+}
+/* =======================
+   Contact Page Centering
+======================= */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically centers */
+  align-items: center;     /* horizontally centers */
+  text-align: center;
+  min-height: 70vh;        /* fills most of the viewport height */
+  padding: 20px;
+}
+
+.contact-container img {
+  max-width: 300px;       /* scale image nicely */
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;    /* space between image and text */
+  border-radius: 12px;    /* optional rounded image */
+}
+
+.contact-container h1,
+.contact-container h2,
+.contact-container p,
+.contact-container a {
+  font-family: gunplay-spraypaint, sans-serif;
+  color: #1E2A38;
+  margin-bottom: 15px;
+}
+
+.contact-container a {
+  color: #1E4ED8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-container a:hover {
   text-decoration: underline;
 }
