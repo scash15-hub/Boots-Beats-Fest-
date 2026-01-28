@@ -12,16 +12,13 @@ p {
   font-family: merriweather, serif;
   font-weight: 400;
   font-style: normal;
+  text-align: center;
 }
 
 h1, h2, h3, h4 {
   font-family: gunplay-spraypaint, sans-serif;
   font-weight: 400;
   font-style: normal;
-  text-align: center;
-}
-
-h1, h2, p, h3 {
   text-align: center;
 }
 
@@ -60,8 +57,6 @@ nav {
   color: #1E2A38;
   font-weight: bold;
   font-family: cc-pass-the-port-aged, sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 23px;
 }
 
@@ -116,6 +111,21 @@ footer {
 }
 
 /* =======================
+   Center All Page Content
+======================= */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* change to center for vertical center */
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 1200px; /* limits content width */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* =======================
    Card Styles
 ======================= */
 .card {
@@ -124,7 +134,7 @@ footer {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  min-height: 360px; /* ensures all cards same height */
+  min-height: 360px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -143,10 +153,12 @@ footer {
   padding: 15px;
 }
 
-
-/* Main act cards / larger images */
-.card.main-act-card .card-img-top {
-  height: 280px;
+/* Images in cards */
+.card img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain; /* ensures full image is visible */
 }
 
 /* Sponsor cards */
@@ -164,12 +176,25 @@ footer {
   padding: 10px;
 }
 
-/* Image containers */
+/* Hover scale for cards */
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* =======================
+   Image Containers
+======================= */
 .image-container {
   display: flex;
   gap: 20px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding: 20px;
 }
 
@@ -195,90 +220,60 @@ footer {
   border-radius: 10px;
 }
 
-/* Stadium cards */
-.stadium-card {
-  max-width: 100%;
-  width: 100%;
-}
-
-.stadium-card .card-img-top {
-  height: 480px;
-  width: 100%;
-  object-fit: cover;
-}
-
-/* Mezzanine cards: two per row */
-.mezzanine .row {
-  justify-content: center;
-  gap: 1rem;
-}
-
-.mezzanine .col-md-6 {
-  display: flex;
-  justify-content: center;
-  flex: 0 0 48%;
-  max-width: 48%;
-  padding: 0.5rem;
-}
-
-.mezzanine .card {
-  width: 100%;
-  min-height: 420px;
-}
-
-/* Hover scale effect for all cards */
-.hover-scale {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover-scale:hover {
-  transform: scale(1.05) translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-}
-
-.card .card-img-top {
-  width: 100%;
-  height: auto;       /* let the height adjust automatically */
-  max-height: 300px;  /* optional max height */
-  object-fit: contain; /* show full image */
-  display: block;
-}
 /* =======================
-   Contact Page Centering
+   Contact Page Specific
 ======================= */
-.contact-container {
+.contact-page {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertically centers */
-  align-items: center;     /* horizontally centers */
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  min-height: 70vh;        /* fills most of the viewport height */
+  min-height: 70vh;
   padding: 20px;
 }
 
-.contact-container img {
-  max-width: 300px;       /* scale image nicely */
+.contact-page img {
+  max-width: 300px;
   width: 100%;
   height: auto;
-  margin-bottom: 20px;    /* space between image and text */
-  border-radius: 12px;    /* optional rounded image */
+  margin-bottom: 20px;
+  border-radius: 12px;
+  object-fit: contain;
 }
 
-.contact-container h1,
-.contact-container h2,
-.contact-container p,
-.contact-container a {
-  font-family: gunplay-spraypaint, sans-serif;
-  color: #1E2A38;
-  margin-bottom: 15px;
+/* =======================
+   Make all cards same height
+======================= */
+.row.cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-.contact-container a {
-  color: #1E4ED8;
-  text-decoration: none;
-  font-weight: bold;
+.row.cards-row .col {
+  display: flex;
 }
 
-.contact-container a:hover {
-  text-decoration: underline;
+.row.cards-row .col .card {
+  flex: 1 1 300px;
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+}
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
